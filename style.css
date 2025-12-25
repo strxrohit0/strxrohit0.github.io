@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+}
+
+.logo { font-size: 24px; font-weight: 700; color: #ffbd39; }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 25px; }
+
+nav ul li a { text-decoration: none; color: #fff; font-size: 14px; transition: 0.3s; }
+
+nav ul li a:hover { color: #ffbd39; }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.hero-text { width: 55%; }
+.hero-text h1 { font-size: 60px; margin: 15px 0; }
+.hero-text h1 span { color: #ffbd39; }
+.hero-text p { color: #888; margin-bottom: 30px; }
+
+.hero-img { width: 35%; }
+.hero-img img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #ffbd39;
+    box-shadow: 0 0 20px rgba(255, 189, 57, 0.3);
+}
+
+/* General Buttons */
+.btns { display: flex; gap: 15px; }
+.btn {
+    padding: 12px 30px;
+    border: 1px solid #ffbd39;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffbd39;
+    transition: 0.4s;
+}
+.btn-filled { background: #ffbd39; color: #000; }
+.btn:hover { background: #ffbd39; color: #000; transform: translateY(-3px); }
+
+/* About */
+.about { padding: 100px 8%; background: #080808; text-align: center; }
+.about h2 { font-size: 40px; color: #ffbd39; margin-bottom: 30px; }
+.about-text ul { list-style: none; margin: 30px 0; }
+.about-text ul li { margin-bottom: 10px; color: #ccc; }
+
+/* Timeline */
+.chapters-section { padding: 100px 8%; }
+.timeline { border-left: 2px solid #ffbd39; margin-left: 20px; padding-left: 30px; }
+.chapter { position: relative; margin-bottom: 50px; }
+.chapter::before {
+    content: ''; position: absolute; left: -41px; top: 5px;
+    width: 20px; height: 20px; background: #ffbd39; border-radius: 50%;
+}
+
+/* Socials */
+.social-section { padding: 100px 8%; text-align: center; background: #080808; }
+.social-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.social-card {
+    background: #111; padding: 30px; border-radius: 15px;
+    text-decoration: none; border: 1px solid #222; transition: 0.3s; width: 150px;
+}
+.social-card i { font-size: 30px; color: #ffbd39; margin-bottom: 10px; display: block; }
+.social-card span { color: #fff; }
+.social-card:hover { background: #ffbd39; }
+.social-card:hover i, .social-card:hover span { color: #000; }
+
+footer { padding: 40px; text-align: center; color: #444; border-top: 1px solid #222; }
+
+/* Skills Section Styling */
+.skills-section { padding: 100px 8%; background: #000; }
+.skills-section h2 { text-align: center; color: #ffbd39; font-size: 40px; margin-bottom: 50px; }
+
+.skills-container { max-width: 800px; margin: 0 auto; }
+.skill-box { margin-bottom: 30px; }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 10px; color: #fff; font-weight: 600; }
+.skill-bar { width: 100%; height: 10px; background: #222; border-radius: 10px; overflow: hidden; }
+.bar-fill { height: 100%; background: #ffbd39; box-shadow: 0 0 10px #ffbd39; transition: 1s ease-in-out; }
+
+/* Projects Section Styling */
+.projects-section { padding: 100px 8%; background: #080808; text-align: center; }
+.projects-section h2 { color: #ffbd39; font-size: 40px; margin-bottom: 50px; }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card { 
+    background: #111; padding: 40px; border-radius: 20px; border: 1px solid #222;
+    transition: 0.4s; text-align: left;
+}
+.project-card:hover { border-color: #ffbd39; transform: translateY(-10px); }
+.project-icon i { font-size: 40px; color: #ffbd39; margin-bottom: 20px; }
+.project-card h3 { color: #fff; margin-bottom: 15px; }
+.project-card p { color: #888; margin-bottom: 20px; font-size: 14px; }
+.project-link { color: #ffbd39; text-decoration: none; font-weight: bold; border-bottom: 1px solid #ffbd39; }
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffbd39;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e1a532;
+}
+
+.typing {
+    color: #ffbd39;
+    border-right: 3px solid #ffbd39;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.hero-img img {
+    transition: 0.5s ease;
+}
+.hero-img:hover img {
+    transform: scale(1.1) rotate(2deg); /* Photo thodi ghumegi aur badi hogi */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ffbd39;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 189, 57, 0.4);
+}
+.back-to-top:hover { transform: translateY(-5px); }
+
+.contact-section h2 i {
+    color: #ffbd39; /* Yellow color for title icons */
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+/* Input ke andar chote icons */
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffbd39;
+}
+
+/* Textarea ke icon ko thoda upar rakhne ke liye */
+.input-group textarea + i {
+    top: 25px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px 15px 15px 45px; /* Left se jagah chhodi icons ke liye */
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.contact-form button i {
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover i {
+    transform: translateX(5px) translateY(-5px); /* Button hover par plane udega */
+}
+
+/* WhatsApp Button under form */
+.wa-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    gap: 10px;
+}
+.wa-btn:hover { background: #128C7E; transform: scale(1.05); }
+
+/* Floating WhatsApp Icon */
+.wa-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px; /* Back-to-top ke thoda upar */
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.wa-float:hover { background-color: #128C7E; transform: scale(1.1); }

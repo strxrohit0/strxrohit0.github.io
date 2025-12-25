@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #000;
+        color: #ffbd39;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+      }
+      #clock {
+        font-size: 80px;
+        border: 5px solid #ffbd39;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #ffbd39;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock">00:00:00</div>
+    <script>
+      function showTime() {
+        let date = new Date();
+        document.getElementById("clock").innerText = date.toLocaleTimeString();
+      }
+      setInterval(showTime, 1000);
+    </script>
+  </body>
+</html>

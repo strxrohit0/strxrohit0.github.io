@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #111;
+        color: #fff;
+        font-family: Arial;
+        padding: 50px;
+      }
+      input {
+        padding: 10px;
+        width: 200px;
+      }
+      button {
+        padding: 10px;
+        background: #ffbd39;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        margin-top: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+        background: #222;
+        padding: 10px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My Tasks</h2>
+    <input type="text" id="taskInput" placeholder="Add new task..." />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      function addTask() {
+        let input = document.getElementById("taskInput");
+        if (input.value === "") return;
+        let li = document.createElement("li");
+        li.innerHTML =
+          input.value +
+          " <button onclick='this.parentElement.remove()'>X</button>";
+        document.getElementById("taskList").appendChild(li);
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>
